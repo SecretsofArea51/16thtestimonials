@@ -1,0 +1,113 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: "Barlow Semi Condensed", sans-serif;
+}
+main{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.container{
+    max-width: 1100px;
+    height: 570px;
+
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1rem;
+    
+    margin-inline: auto;
+}
+.box{
+    border-radius: 1rem;
+    padding: 1rem 1rem 0 1rem;
+    box-shadow: 6px 5px 20px black; 
+}
+.gacha{
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+.box-1{
+    grid-column-start: span 2;
+    background-color: hsl(263, 55%, 52%);
+
+    background-image: url(images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-size: 20%;
+    background-position:80% 0%;
+
+    color: white;
+}
+.box img{
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    /* vertical-align: top; */
+}
+.identity{
+    display: flex;
+    gap: 1rem;
+    font-size: 13px;
+}
+.identity span{
+    align-self: center;
+}
+.box-2{
+    background-color: hsl(217, 19%, 35%);
+    color: white;
+}
+.box-3{
+    /* grid-column-start: 2; */
+    color: hsl(217, 19%, 35%);
+}
+.box-4{
+    color: white;
+    background-color: hsl(219, 29%, 14%);
+    grid-column-start: span 2;
+}
+.box-5{
+    color: hsl(217, 19%, 35%);
+    grid-row-start: 1;
+    grid-column-start: 4;
+    grid-row-end: span 2;
+}
+@media(max-width: 1100px){
+    .container{
+        padding-inline: 2rem;
+    }
+}
+@media(max-width: 1000px){
+    .container{
+        gap: 8px;
+    }
+}
+@media(max-width: 900px){
+    .container{
+        display: unset;
+        min-height: max-content;
+        max-width: 500px;
+        margin-top: 3rem;
+    }
+    .box{
+        padding-bottom: 1rem;
+        margin-bottom: 2rem;
+    }
+}
+@media(max-width: 450px){
+    .container{
+        padding-inline: 6px;
+    }
+    .box{
+        border-radius: 0.3rem;
+    }
+}
+@media(max-width: 350px){
+    .container{
+        padding-inline: 3
+    }
+    .box{
+        padding: 0.5rem 0.25rem 0.1rem 0.25rem;
+    }
+}
